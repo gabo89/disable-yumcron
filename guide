@@ -1,0 +1,27 @@
+$ sudo yum install yum-cron
+
+for centos 7
+
+
+sudo systemctl enable yum-cron.service
+sudo systemctl start yum-cron.service
+sudo systemctl status yum-cron.service
+
+configure cron for automatic updates
+
+
+$ sudo vi /etc/yum/yum-cron.conf
+
+#danger
+apply_updates = yes
+exclude=kernel*
+
+
+
+
+
+to eliminate old url show in yum 
+
+
+yum clean all
+yum makecache
